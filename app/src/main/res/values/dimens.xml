@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="weather_imageWidthHeight">48dp</dimen>
+    <dimen name="weather_item_height">100dp</dimen>
+    <dimen name="weather_image_marginStart">20dp</dimen>
+    <dimen name="weather_cityName_marginStart">20dp</dimen>
+    <dimen name="weather_cityName_marginEND">50dp</dimen>
+    <dimen name="weather_text_display">24sp</dimen>
+</resources>

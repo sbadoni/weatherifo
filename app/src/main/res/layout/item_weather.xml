@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weather_item_height"
+    android:layout_margin="15dp"
+    android:background="@drawable/layout_border">
+
+    <ImageView
+        android:id="@+id/weather_image"
+        android:layout_width="@dimen/weather_imageWidthHeight"
+        android:layout_height="@dimen/weather_imageWidthHeight"
+        android:layout_marginStart="@dimen/weather_image_marginStart"
+        android:background="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weather_cityName"
+        style="@style/BaseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/weather_cityName_marginStart"
+        android:singleLine="true"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weather_temperature"
+        app:layout_constraintStart_toEndOf="@id/weather_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="International airport is hererererrwrwer" />
+
+
+    <TextView
+        android:id="@+id/weather_temperature"
+        style="@style/BaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/weather_cityName_marginEND"
+        app:layout_constraintEnd_toEndOf="@id/weather_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weather_delete"
+        tools:text="31" />
+
+    <TextView
+        android:id="@+id/weather_condition"
+        style="@style/BaseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/weather_temperature"
+        app:layout_constraintTop_toBottomOf="@id/weather_delete"
+        app:layout_constraintStart_toEndOf="@id/weather_cityName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weather_delete"
+        tools:text="Sunny" />
+
+    <ImageView
+        android:id="@+id/weather_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_delete"
+        app:layout_constraintStart_toEndOf="@id/weather_temperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
